@@ -4,7 +4,7 @@ import Hero from "./components/hero";
 const App = () => {
   return (
     <div className="p-8 flex flex-col gap-4">
-      <div className="text-8xl">Abdullah Ansari</div>
+      <div className="text-8xl">Abdullah Ansari's</div>
       <Hero />
       <Footer />
     </div>
