@@ -17,6 +17,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        syne: ["Syne", "sans-serif"],
+        galada: ["Galada", "cursive"],
+        ranga: ["Ranga", "cursive"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

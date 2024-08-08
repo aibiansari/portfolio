@@ -1,5 +1,5 @@
 import Footer from "./components/ui/footer";
-import Hero from "./components/ui/hero";
+import Navbar from "./components/ui/navbar";
 import { Switch } from "./components/ui/switch";
 import { useState } from "react";
 
@@ -11,11 +11,10 @@ const App = () => {
   };
 
   return (
-    <div className={`p-8 flex flex-col gap-4 ${isDarkMode ? "dark" : ""}`}>
-      <div className="text-8xl">Abdullah Ansari's</div>
-      <Hero />
+    <div className={`flex flex-col gap-4 ${isDarkMode ? "dark" : ""}`}>
+      <Navbar />
       <Footer />
-      <div className="absolute right-12 top-12 flex gap-3">
+      <div className="absolute left-8 bottom-6 flex gap-3">
         <p>Dark Mode</p>
         <Switch onCheckedChange={handleToggle} />
       </div>
