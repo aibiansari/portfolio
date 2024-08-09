@@ -1,19 +1,37 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Socials from "../socials";
+import Socials from "./socials";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    if (currentScrollPos > 0) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+    setScrollPosition(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
-      className="w-screen fixed flex items-center justify-between bg-gray-900 py-2 px-4 xl:px-48"
-      style={{
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) 80%, transparent 100%)",
-      }}
+      className="
+    w-screen fixed flex items-center justify-between py-2 px-4 xl:px-48
+    bg-gradient-to-b from-black/70 via-black/30 to-transparent
+    dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent
+  "
     >
       <div className="relative flex items-center justify-start md:hidden">
         <AnimatePresence>
@@ -44,22 +62,16 @@ const Navbar = () => {
               className="flex items-center space-x-6 font-ranga text-2xl sm:text-3xl"
             >
               <li>
-                <a href="#home" className="text-white">
-                  Aibi
-                </a>
+                <a href="#home">Aibi</a>
               </li>
               <li>
-                <a href="#about" className="text-white">
-                  About
-                </a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#portfolio" className="text-white">
-                  Portfolio
-                </a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="#contact" className="text-violet-600">
+                <a href="#contact" className="underline ">
                   Contact Me
                 </a>
               </li>

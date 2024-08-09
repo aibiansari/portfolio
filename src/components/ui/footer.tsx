@@ -1,6 +1,8 @@
 const Footer = () => {
   return (
-    <div className="absolute bottom-2 right-4 text-2xl">Coming soon...</div>
+    <p className="text-center p-4 font-Atkinson">
+      &copy; 2020-present Abdullah Ansari. All rights reserved.
+    </p>
   );
 };
 
