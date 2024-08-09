@@ -5,8 +5,7 @@ import Socials from "./socials";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
