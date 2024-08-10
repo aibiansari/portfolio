@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav
       className="
     w-screen fixed flex items-center justify-between py-2 px-4 xl:px-48
-    bg-gradient-to-b from-black/70 via-black/30 to-transparent
+    bg-gradient-to-b from-white/70 via-white/30 to-transparent
     dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent
   "
     >

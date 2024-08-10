@@ -21,6 +21,7 @@ export default {
         syne: ["Syne", "sans-serif"],
         galada: ["Galada", "cursive"],
         ranga: ["Ranga", "cursive"],
+        Atkinson: ["Atkinson Hyperlegible", "cursive"],
       },
       keyframes: {
         "accordion-down": {
