@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Socials from "./socials";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
   const [, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
