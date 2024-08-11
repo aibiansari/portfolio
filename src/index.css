@@ -5,13 +5,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-#techstack > img {
-  width: 63px;
-  height: 63px;
-  transition: transform 0.3s ease-out;
-}
-
-#techstack > img:hover {
-  transform: translateY(-5px);
-}

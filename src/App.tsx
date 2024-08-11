@@ -1,11 +1,14 @@
 import Footer from "./components/ui/footer";
 import Navbar from "./components/ui/navbar";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { FaArrowUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import profile from "/profile.jpg";
 import cv from "/aibiansariCV.pdf";
+import About from "./components/ui/about";
 
 const App = () => {
+  const [showScrollTop, setShowScrollTop] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -22,8 +25,27 @@ const App = () => {
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleToggle = () => {
     setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -60,71 +82,21 @@ const App = () => {
       </div>
       <div
         id="about"
-        className="flex flex-col lg:flex-row gap-6 lg:space-x-10 mt-6 px-6"
+        className="min-h-screen flex flex-col items-center justify-center px-8 pb-16 text-zinc-50"
       >
-        <div className="lg:w-1/2 lg:pl-4">
-          <h1 className="text-6xl font-ranga md:mb-2">About me</h1>
-          <p className="text-xl md:text-2xl font-Atkinson text-justify">
-            Hey there! I'm Abdullah, a web & visual
-            <span className="text-indigo-600 font-bold"> designer</span> from
-            Pakistan. I specialize in creating dynamic and visually appealing
-            web applications using Next.js, React & Tailwind CSS. With a strong
-            foundation in graphic design, I'm capable of building seamless and
-            user-friendly interfaces that not only function well but also look
-            great. Whether it's coding a responsive website or crafting a
-            stunning visual design, I bring creativity and technical expertise
-            to every project.
-          </p>
-        </div>
-        <div className="lg:w-1/2 lg:px-6">
-          <h1 className="text-6xl font-ranga md:mb-4">I'm Skilled in</h1>
-          <div
-            id="techstack"
-            className="flex flex-wrap items-center justify-around sm:justify-start gap-8 mt-4 lg:mt-0"
-          >
-            <i className="devicon-nextjs-plain text-6xl text-black dark:text-white hover:-translate-y-1 transition-transform duration-300 ease-out"></i>
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-              alt="React"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-              alt="Tailwind CSS"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-              alt="HTML5"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-              alt="CSS3"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-              alt="TypeScript"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-              alt="Figma"
-            />
-            <i className="devicon-illustrator-line text-6xl text-neutral-900 dark:text-white hover:-translate-y-1 transition-transform duration-300 ease-out colored"></i>
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
-              alt="Adobe Photoshop"
-            />
-            <i className="devicon-github-original text-6xl text-neutral-900 hover:-translate-y-1 transition-transform duration-300 ease-out dark:text-white"></i>
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-              alt="Git"
-            />
-          </div>
-        </div>
+        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16 pb-8">
+          About Me
+        </h1>
+        <About />
       </div>
-
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full left-5 bottom-6 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
+        >
+          <FaArrowUp />
+        </button>
+      )}
       <button
         onClick={handleToggle}
         className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full right-5 bottom-6 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
