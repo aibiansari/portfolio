@@ -1,12 +1,10 @@
 import { FiArrowRight } from "react-icons/fi";
-import { FaCode } from "react-icons/fa6";
-import { RiPenNibLine } from "react-icons/ri";
-import { BsGrid1X2 } from "react-icons/bs";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import avatar from "/avatar.png";
 import Block from "@/components/ui/block";
 import Techstack from "@/components/ui/techstack";
+import Services from "./services";
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -29,8 +27,8 @@ const About = () => {
           </span>
         </h1>
         <a
-          href="#"
-          className="flex items-center gap-1 text-indigo-600 font-medium hover:underline"
+          href="#contact"
+          className="flex items-center gap-1 text-indigo-600 font-medium hover:translate-x-1 transition-transform duration-300 ease-out"
         >
           Contact me <FiArrowRight />
         </a>
@@ -48,38 +46,7 @@ const About = () => {
           </span>
         </p>
       </Block>
-      <Block className="col-span-12 bg-slate-200 shadow-black/10 shadow-xl dark:bg-slate-900 md:col-span-4 flex flex-col items-center justify-start gap-4">
-        <FaCode size="3em" className="text-indigo-600" />
-        <h1 className="text-2xl text-slate-800 dark:text-slate-100 font-bold">
-          Web Developer
-        </h1>
-        <p className="text-center text-xl text-zinc-500">
-          Building fast, responsive websites using the latest tech. From simple
-          pages to complex apps, I ensure a seamless, optimized user experience.
-        </p>
-        <p></p>
-      </Block>
-      <Block className="col-span-12 bg-slate-200 shadow-black/10 shadow-xl dark:bg-slate-900 md:col-span-4 flex flex-col items-center justify-start gap-4">
-        <RiPenNibLine size="3em" className="text-indigo-600" />
-        <h1 className="text-2xl text-slate-800 dark:text-slate-100 font-bold">
-          Web Designer
-        </h1>
-        <p className="text-center text-xl text-zinc-500">
-          Design is at the heart of what I do, Crafting visually stunning,
-          user-friendly websites that reflect your brand and drive engagement.
-        </p>
-      </Block>
-      <Block className="col-span-12 bg-slate-200 shadow-black/10 shadow-xl dark:bg-slate-900 md:col-span-4 flex flex-col items-center justify-start gap-4">
-        <BsGrid1X2 size="2.4em" className="text-indigo-600 mb-2.5" />
-        <h1 className="text-2xl text-slate-800 dark:text-slate-100 font-bold">
-          Graphic Designer
-        </h1>
-        <p className="text-center text-xl text-zinc-500">
-          I craft eye-catching graphics, delivering your brand’s message. From
-          logos to marketing materials, I ensure every design is aligned with
-          your vision.
-        </p>
-      </Block>
+      <Services />
     </motion.div>
   );
 };

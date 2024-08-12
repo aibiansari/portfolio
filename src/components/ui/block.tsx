@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 const Block = ({ className, ...rest }) => {
   return (
     <motion.div
-      data-aos="fade-up"
       variants={{
         initial: {
           scale: 0.5,

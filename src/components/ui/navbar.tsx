@@ -24,12 +24,19 @@ const Navbar = () => {
     };
   }, []);
 
+  const NavItems = [
+    { href: "#home", label: "Aibi" },
+    { href: "#about", label: "About" },
+    { href: "#portfolio", label: "Portfolio" },
+    { href: "#contact", label: "Contact Me", underline: true },
+  ];
+
   return (
     <nav
       className="
-    w-screen fixed flex items-center justify-between py-2 px-4 xl:px-48
+    w-screen fixed flex items-center justify-between py-2 px-4 xl:px-36
     bg-gradient-to-b from-white/70 via-white/30 to-transparent
-    dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent
+    dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent z-40
   "
     >
       <div className="relative flex items-center justify-start md:hidden">
@@ -58,22 +65,18 @@ const Navbar = () => {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "10%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 90, damping: 14 }}
-              className="flex items-center space-x-6 font-ranga text-2xl sm:text-3xl"
+              className="flex items-center space-x-8 font-ranga text-3xl md:text-4xl"
             >
-              <li>
-                <a href="#home">Aibi</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact" className="underline ">
-                  Contact Me
-                </a>
-              </li>
+              {NavItems.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.href}
+                    className={item.underline ? "underline" : ""}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </motion.ul>
           )}
         </AnimatePresence>

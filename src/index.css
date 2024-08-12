@@ -5,3 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.rotate {
+  transform: rotate(2.5deg);
+}

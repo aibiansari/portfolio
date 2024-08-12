@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import profile from "/profile.jpg";
 import cv from "/aibiansariCV.pdf";
 import About from "./components/ui/about";
+import Portfolio from "./components/ui/portfolio";
+import Contact from "./components/ui/contact";
+import { Toaster } from "sonner";
 
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(true);
@@ -54,6 +57,17 @@ const App = () => {
         isDarkMode ? "dark" : ""
       }`}
     >
+      <Toaster
+        position="top-center"
+        richColors
+        toastOptions={{
+          style: {
+            background: "#e2e8f0",
+            padding: "12px",
+            paddingLeft: "24px",
+          },
+        }}
+      />
       <Navbar />
       <div
         id="home"
@@ -82,12 +96,30 @@ const App = () => {
       </div>
       <div
         id="about"
-        className="min-h-screen flex flex-col items-center justify-center px-8 pb-16 text-zinc-50"
+        className="min-h-screen flex flex-col items-center justify-center px-8 pb-4 text-zinc-50"
       >
         <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16 pb-8">
           About Me
         </h1>
         <About />
+      </div>
+      <div
+        id="portfolio"
+        className="flex flex-col items-center justify-center px-8 pb-8 text-zinc-50"
+      >
+        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16 pb-8">
+          Portfolio
+        </h1>
+        <Portfolio />
+      </div>
+      <div
+        id="contact"
+        className="flex flex-col items-center justify-center px-8 pb-4 text-zinc-50"
+      >
+        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16">
+          Let's get going
+        </h1>
+        <Contact />
       </div>
       {showScrollTop && (
         <button
