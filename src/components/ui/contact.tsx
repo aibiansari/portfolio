@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
   };
 
   const inputClasses =
-    "w-full p-3 pr-44 md:pr-32 text-neutral-500 dark:text-neutral-400 placeholder:dark:text-slate-600 bg-transparent border border-neutral-600 dark:border-slate-200 rounded-md shadow-sm";
+    "w-[340px] p-3 text-neutral-500 dark:text-neutral-400 placeholder:dark:text-slate-600 bg-transparent border border-neutral-600 dark:border-slate-200 rounded-md shadow-sm";
   const labelClasses =
     "absolute -top-3 left-2 text-sm font-medium text-neutral-600 dark:text-slate-200 px-2 bg-slate-200 dark:bg-slate-950 transition-colors duration-500";
 
@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
     <section id="contact" className="py-8">
       <form
         onSubmit={handleSubmit}
-        className="max-w-4xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-2"
+        className="max-w-5xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-2"
       >
         <div className="relative md:col-span-1">
           <label htmlFor="name" className={labelClasses}>
@@ -74,9 +74,9 @@ const ContactForm: React.FC = () => {
             name="message"
             placeholder="Write your message"
             autoComplete="off"
-            rows={12}
+            rows={14}
             required
-            className={inputClasses}
+            className={`${inputClasses} md:w-[708px]`}
           ></textarea>
         </div>
         <div className="md:col-span-2 flex justify-center">

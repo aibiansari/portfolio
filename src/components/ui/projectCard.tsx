@@ -74,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {name}
         </h2>
       </div>
-      <p className="w-full px-4 font-Atkinson text-justify text-xl text-zinc-500">
+      <p className="w-full px-4 font-Atkinson text-center text-xl text-zinc-500">
         {desc}
       </p>
       <div className="flex justify-center w-full mt-8 flex-wrap gap-x-8 gap-y-2">

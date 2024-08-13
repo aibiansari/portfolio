@@ -65,7 +65,7 @@ const Navbar = () => {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "10%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 90, damping: 14 }}
-              className="flex items-center space-x-8 font-ranga text-3xl md:text-4xl"
+              className="flex items-center space-x-5 md:space-x-8 font-ranga text-2xl md:text-3xl"
             >
               {NavItems.map((item, index) => (
                 <li key={index}>

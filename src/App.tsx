@@ -116,7 +116,7 @@ const App = () => {
         id="contact"
         className="flex flex-col items-center justify-center px-8 pb-4 text-zinc-50"
       >
-        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16">
+        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-12">
           Let's get going
         </h1>
         <Contact />
@@ -124,14 +124,14 @@ const App = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full left-5 bottom-6 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
+          className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full left-5 bottom-8 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
         >
           <FaArrowUp />
         </button>
       )}
       <button
         onClick={handleToggle}
-        className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full right-5 bottom-6 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
+        className="fixed flex items-center justify-center shadow-black/40 shadow-lg bg-slate-400 dark:bg-slate-800 size-11 rounded-full right-5 bottom-8 hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-linear"
       >
         {isDarkMode ? (
           <MdOutlineDarkMode size="1.8em" />

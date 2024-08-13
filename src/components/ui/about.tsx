@@ -34,7 +34,7 @@ const About = () => {
         </a>
       </Block>
       <Techstack />
-      <Block className="col-span-12 text-3xl text-indigo-600 dark:text-white leading-snug text-justify mb-2 p-8">
+      <Block className="col-span-12 text-3xl text-indigo-600 dark:text-white leading-snug text-center md:text-justify mb-2 p-8">
         <p>
           I'm a web & visual designer from Pakistan.{" "}
           <span className="text-zinc-500">
