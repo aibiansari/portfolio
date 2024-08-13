@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
 
 const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement | null>(null); // Form reference
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,6 +19,11 @@ const ContactForm: React.FC = () => {
       );
       console.log("Email sent successfully:", result.text);
       toast.success("Email sent successfully!");
+
+      // Reset form fields
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     } catch (error) {
       console.log("Email sending error:", error);
       toast.error("Email sending error!");
@@ -34,6 +40,7 @@ const ContactForm: React.FC = () => {
   return (
     <section id="contact" className="py-8">
       <form
+        ref={formRef} // Attach ref to the form
         onSubmit={handleSubmit}
         className="max-w-5xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-2"
       >
