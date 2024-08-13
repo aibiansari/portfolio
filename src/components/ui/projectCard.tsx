@@ -51,6 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <img
           src={bgImage}
           alt={`${name} Background`}
+          loading="lazy"
           className={`h-full w-full object-cover rounded-xl transition-transform duration-500 ${
             hover ? "scale-110 grayscale-0" : "grayscale scale-100"
           }`}

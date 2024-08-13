@@ -1,14 +1,14 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectCard from "./projectCard";
-import bg1 from "/cardsBG/bg1.png";
-import bg2 from "/cardsBG/bg2.png";
-import bg3 from "/cardsBG/bg3.png";
-import bg4 from "/cardsBG/bg4.png";
-import icon1 from "/cardsIcon/icon1.png";
-import icon2 from "/cardsIcon/icon2.png";
-import icon3 from "/cardsIcon/icon3.png";
-import icon4 from "/cardsIcon/icon4.png";
+import bg1 from "/cardsBG/bg1.webp";
+import bg2 from "/cardsBG/bg2.webp";
+import bg3 from "/cardsBG/bg3.webp";
+import bg4 from "/cardsBG/bg4.webp";
+import icon1 from "/cardsIcon/icon1.webp";
+import icon2 from "/cardsIcon/icon2.webp";
+import icon3 from "/cardsIcon/icon3.webp";
+import icon4 from "/cardsIcon/icon4.webp";
 
 const Portfolio: React.FC = () => {
   const projectData = [

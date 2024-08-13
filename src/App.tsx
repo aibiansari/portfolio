@@ -3,7 +3,7 @@ import Navbar from "./components/ui/navbar";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import profile from "/profile.jpg";
+import profile from "/profile.webp";
 import cv from "/aibiansariCV.pdf";
 import About from "./components/ui/about";
 import Portfolio from "./components/ui/portfolio";
@@ -77,6 +77,7 @@ const App = () => {
           <img
             src={profile}
             alt="profile"
+            loading="eager"
             className="w-60 h-60 xl:w-80 xl:h-80 rounded-full border-8 border-indigo-600"
           />
         </div>

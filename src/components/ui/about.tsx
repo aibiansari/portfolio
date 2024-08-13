@@ -1,7 +1,7 @@
 import { FiArrowRight } from "react-icons/fi";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import avatar from "/avatar.png";
+import avatar from "/avatar.webp";
 import Block from "@/components/ui/block";
 import Techstack from "@/components/ui/techstack";
 import Services from "./services";
