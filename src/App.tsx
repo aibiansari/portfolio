@@ -43,6 +43,14 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = profile;
+    document.head.appendChild(link);
+  }, []);
+
   const handleToggle = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
