@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav
       className="
-    w-screen fixed flex items-center justify-between py-2 px-4 xl:px-36
+    w-screen fixed flex items-center justify-between md:justify-around py-2 px-4 md:px-12
     bg-gradient-to-b from-white/70 via-white/30 to-transparent
     dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent z-40
   "
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="hidden md:block">
         <Socials />
       </div>
-      <div className="flex items-center justify-center gap-5">
+      <div className="md:min-w-[500px] flex items-center justify-end gap-5">
         <AnimatePresence>
           {isOpen && (
             <motion.ul
