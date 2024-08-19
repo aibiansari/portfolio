@@ -5,10 +5,12 @@ import bg1 from "/cardsBG/bg1.webp";
 import bg2 from "/cardsBG/bg2.webp";
 import bg3 from "/cardsBG/bg3.webp";
 import bg4 from "/cardsBG/bg4.webp";
+import bg5 from "/cardsBG/bg5.webp";
 import icon1 from "/cardsIcon/icon1.webp";
 import icon2 from "/cardsIcon/icon2.webp";
 import icon3 from "/cardsIcon/icon3.webp";
 import icon4 from "/cardsIcon/icon4.webp";
+import icon5 from "/cardsIcon/icon5.webp";
 
 const Portfolio: React.FC = () => {
   const projectData = [
@@ -34,6 +36,19 @@ const Portfolio: React.FC = () => {
         { name: "XML", percentage: 35, color: "#f68009" },
         { name: "Java", percentage: 45, color: "#ed272c" },
         { name: "SQLite", percentage: 20, color: "#248ed1" },
+      ],
+    },
+    {
+      bgImage: bg5,
+      icon: icon5,
+      name: "Schnell Image Generator",
+      desc: "Fast and intuitive image generator that brings your ideas to life in seconds, Using Flux AI's advanced Schnell model. Whether you're a designer or just someone looking to experiment with visual concepts, Schnell is here to help you generate high-quality images",
+      link: "https://github.com/aibiansari/schnell-image-generator",
+      techstack: [
+        { name: "TypeScript", percentage: 75, color: "#3178c6" },
+        { name: "JavaScript", percentage: 10, color: "#f7e025" },
+        { name: "HTML", percentage: 8, color: "#F16529" },
+        { name: "CSS", percentage: 7, color: "#563d7c" },
       ],
     },
     {
