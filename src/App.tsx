@@ -79,25 +79,26 @@ const App = () => {
       <Navbar />
       <div
         id="home"
-        className="min-h-screen bg-[linear-gradient(0deg,_transparent_58%,_#4f46e5_58%)] xl:bg-[linear-gradient(-90deg,_transparent_68%,_#4f46e5_68%)] border-b-8 border-indigo-600 flex flex-col xl:flex-row items-center justify-start xl:justify-center pt-24 xl:pt-0 gap-10 xl:gap-36"
+        className="min-h-screen bg-[linear-gradient(0deg,_transparent_58%,_#4f46e5_58%)] xl:bg-[linear-gradient(-90deg,_transparent_69%,_#4f46e5_68%)] 2xl:bg-[linear-gradient(-90deg,_transparent_64%,_#4f46e5_64%)] border-b-8 border-indigo-600 flex flex-col xl:flex-row items-center justify-start xl:justify-center pt-24 xl:pt-0 gap-10 xl:gap-36"
       >
-        <div className="border-8 bg-slate-200 dark:bg-slate-950 border-indigo-600 p-8 rounded-full transition-colors duration-500">
+        <div className="border-8 bg-slate-200 dark:bg-slate-950 border-indigo-600 p-8 rounded-full transition-all duration-500 hover:scale-105">
           <img
             src={profile}
             alt="profile"
             loading="eager"
+            draggable="false"
             className="w-60 h-60 xl:w-80 xl:h-80 rounded-full border-8 border-indigo-600"
           />
         </div>
         <div className="font-syne flex flex-col items-center xl:items-start justify-center">
-          <p className="text-5xl md:text-6xl">Abdullah Ansari</p>
+          <p className="text-5xl md:text-6xl font-medium">Abdullah Ansari</p>
           <p className="text-2xl md:text-3xl mt-1 dark:text-neutral-400">
             Web & Visual Designer
           </p>
           <a
             href={cv}
             download
-            className="inline-block text-white bg-indigo-600 p-3 rounded-lg text-md mt-8 mb-2 hover:scale-105 active:scale-100 transition-all duration-200 ease-out"
+            className="inline-block text-white font-medium bg-indigo-600 p-3 rounded-lg text-md mt-8 mb-2 hover:scale-105 active:scale-100 transition-all duration-200 ease-out"
           >
             Download CV
           </a>

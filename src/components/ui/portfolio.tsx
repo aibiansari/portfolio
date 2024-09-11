@@ -19,7 +19,7 @@ const Portfolio: React.FC = () => {
       icon: icon1,
       name: "Mistle: Online Diagrams",
       desc: "Mistle is a free and open-source web app designed to simplify the process of creating and managing UML and other documentation diagrams. Mistle offers robust tools and templates to streamline documentation for university projects and beyond.",
-      link: "https://mistle-csv5gzllfq-uc.a.run.app",
+      link: "https://mistle-1rft.vercel.app",
       techstack: [
         { name: "HTML", percentage: 22, color: "#F16529" },
         { name: "CSS", percentage: 18, color: "#563d7c" },
@@ -43,7 +43,7 @@ const Portfolio: React.FC = () => {
       icon: icon5,
       name: "Schnell Image Generator",
       desc: "Fast and intuitive image generator that brings your ideas to life in seconds, Using Flux AI's advanced Schnell model. Whether you're a designer or just someone looking to experiment with visual concepts, Schnell is here to help you generate high-quality images",
-      link: "https://github.com/aibiansari/schnell-image-generator",
+      link: "https://aibiansari.github.io/schnell-image-generator/",
       techstack: [
         { name: "TypeScript", percentage: 75, color: "#3178c6" },
         { name: "JavaScript", percentage: 10, color: "#f7e025" },

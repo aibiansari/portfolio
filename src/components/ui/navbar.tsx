@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav
       className="
-    w-screen fixed flex items-center justify-between md:justify-around py-2 px-4 md:px-12
+    w-screen fixed flex items-center justify-between md:justify-around py-2 px-4 md:px-12 2xl:px-36
     bg-gradient-to-b from-white/70 via-white/30 to-transparent
     dark:bg-gradient-to-b dark:from-black/90 dark:via-black/50 dark:to-transparent z-40
   "
