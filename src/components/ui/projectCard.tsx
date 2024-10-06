@@ -45,15 +45,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => window.open(link, "_blank")}
-      className="relative flex flex-col items-center p-5 bg-slate-200 shadow-black/10 shadow-xl dark:bg-slate-900 rounded-xl cursor-pointer transition-transform duration-300"
+      className="relative flex flex-col items-center p-5 bg-slate-200 shadow-black/10 shadow-xl dark:bg-slate-900 rounded-xl cursor-pointer transition-all duration-500"
     >
       <div className="h-56 border-2 border-zinc-300 dark:border-none w-80% rounded-xl overflow-hidden">
         <img
           src={bgImage}
           alt={`${name} Background`}
           loading="lazy"
-          className={`h-full w-full object-cover rounded-xl transition-transform duration-500 ${
-            hover ? "scale-110 grayscale-0" : "grayscale scale-100"
+          className={`h-full w-full object-cover rounded-xl transition-all duration-500 ${
+            hover ? "scale-105 grayscale-0" : "grayscale scale-100"
           }`}
         />
       </div>

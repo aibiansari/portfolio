@@ -6,11 +6,13 @@ import bg2 from "/cardsBG/bg2.webp";
 import bg3 from "/cardsBG/bg3.webp";
 import bg4 from "/cardsBG/bg4.webp";
 import bg5 from "/cardsBG/bg5.webp";
+import bg6 from "/cardsBG/bg6.webp";
 import icon1 from "/cardsIcon/icon1.webp";
 import icon2 from "/cardsIcon/icon2.webp";
 import icon3 from "/cardsIcon/icon3.webp";
 import icon4 from "/cardsIcon/icon4.webp";
 import icon5 from "/cardsIcon/icon5.webp";
+import icon6 from "/cardsIcon/icon6.webp";
 
 const Portfolio: React.FC = () => {
   const projectData = [
@@ -24,6 +26,18 @@ const Portfolio: React.FC = () => {
         { name: "HTML", percentage: 22, color: "#F16529" },
         { name: "CSS", percentage: 18, color: "#563d7c" },
         { name: "TypeScript", percentage: 60, color: "#3178c6" },
+      ],
+    },
+    {
+      bgImage: bg6,
+      icon: icon6,
+      name: "Linkrary",
+      desc: "Linkrary is the ultimate resource hub, bringing together a curated selection of the best web tools, design inspirations, development utilities, and more. Linkrary organizes everything into categories, making it simple to find exactly what you need.",
+      link: "https://aibiansari.github.io/Linkrary",
+      techstack: [
+        { name: "HTML", percentage: 10, color: "#F16529" },
+        { name: "CSS", percentage: 10, color: "#563d7c" },
+        { name: "TypeScript", percentage: 80, color: "#3178c6" },
       ],
     },
     {
