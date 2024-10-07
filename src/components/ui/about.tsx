@@ -36,7 +36,7 @@ const About = () => {
       <Techstack />
       <Block className="col-span-12 text-3xl text-indigo-600 dark:text-white leading-snug text-center md:text-justify mb-2 p-8">
         <p>
-          I'm a web & visual designer from Pakistan.{" "}
+          I'm a Frontend Developer from Pakistan.{" "}
           <span className="text-zinc-500">
             I specialize in creating dynamic and visually appealing web
             applications using Next.js, React & Tailwind CSS. With a strong
