@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
       bgImage: bg5,
       icon: icon5,
       name: "Schnell Image Generator",
-      desc: "Fast and intuitive image generator that brings your ideas to life in seconds, Using Flux AI's advanced Schnell model. Whether you're a designer or just someone looking to experiment with visual concepts, Schnell is here to help you generate high-quality images",
+      desc: "Fast and intuitive image generator that brings your ideas to life in seconds, Using Flux AI's advanced Schnell model. Whether you're a designer or just someone looking to experiment with visual concepts, Schnell is here to help you generate high-quality images.",
       link: "https://aibiansari.github.io/schnell-image-generator/",
       techstack: [
         { name: "TypeScript", percentage: 75, color: "#3178c6" },
