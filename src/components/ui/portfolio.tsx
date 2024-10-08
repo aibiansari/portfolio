@@ -7,12 +7,14 @@ import bg3 from "/cardsBG/bg3.webp";
 import bg4 from "/cardsBG/bg4.webp";
 import bg5 from "/cardsBG/bg5.webp";
 import bg6 from "/cardsBG/bg6.webp";
+import bg7 from "/cardsBG/bg7.webp";
 import icon1 from "/cardsIcon/icon1.webp";
 import icon2 from "/cardsIcon/icon2.webp";
 import icon3 from "/cardsIcon/icon3.webp";
 import icon4 from "/cardsIcon/icon4.webp";
 import icon5 from "/cardsIcon/icon5.webp";
 import icon6 from "/cardsIcon/icon6.webp";
+import icon7 from "/cardsIcon/icon7.webp";
 
 const Portfolio: React.FC = () => {
   const projectData = [
@@ -64,6 +66,14 @@ const Portfolio: React.FC = () => {
         { name: "HTML", percentage: 8, color: "#F16529" },
         { name: "CSS", percentage: 7, color: "#563d7c" },
       ],
+    },
+    {
+      bgImage: bg7,
+      icon: icon7,
+      name: "Framer Portfolio",
+      desc: "This modern website is built using Framer web builder. It showcases my projects, skills, and experience in web development and graphic design. The layout is designed to be engaging and interactive, with smooth animations and transitions.",
+      link: "https://aibiansari.framer.website",
+      techstack: [{ name: "Framer", percentage: 100, color: "#Ffffff" }],
     },
     {
       bgImage: bg3,
