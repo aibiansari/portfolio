@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCode } from "react-icons/fa";
-import { RiPenNibLine } from "react-icons/ri";
+import { FaShopify } from "react-icons/fa";
 import { BsGrid1X2 } from "react-icons/bs";
 import Block from "./block";
 
@@ -10,19 +10,19 @@ const Services: React.FC = () => {
       icon: <FaCode size="3em" />,
       title: "Web Developer",
       description:
-        "Building fast, responsive websites using the latest tech. From simple pages to complex apps, I ensure a seamless, optimized user experience.",
+        "I build fast and responsive websites with modern tools. From basic pages to advanced apps, I deliver a seamless user experience.",
     },
     {
-      icon: <RiPenNibLine size="3em" />,
-      title: "Web Designer",
+      icon: <FaShopify size="2.6em" className="mb-2" />,
+      title: "Shopify Developer",
       description:
-        "Design is at the heart of what I do, crafting visually stunning, user-friendly websites that reflect your brand and drive engagement.",
+        "I specialize in creating and customizing Shopify stores. From full store setups to unique features, I craft shops that drive sales.",
     },
     {
       icon: <BsGrid1X2 size="2.4em" className="mb-2.5" />,
       title: "Graphic Designer",
       description:
-        "I craft eye-catching graphics, delivering your brand’s message. From logos to marketing materials, I ensure every design is aligned with your vision.",
+        "I design captivating visuals that embody your brand. From logos to marketing materials, I ensure every piece reflects your vision.",
     },
   ];
 

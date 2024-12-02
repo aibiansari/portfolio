@@ -92,8 +92,8 @@ const App = () => {
         </div>
         <div className="font-syne flex flex-col items-center xl:items-start justify-center">
           <p className="text-5xl md:text-6xl font-medium">Abdullah Ansari</p>
-          <p className="text-2xl md:text-3xl mt-1 dark:text-neutral-400">
-            Frontend Developer
+          <p className="text-xl md:text-2xl mt-1 dark:text-neutral-400">
+            Shopify & Frontend Developer
           </p>
           <a
             href={cv}

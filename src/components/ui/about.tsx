@@ -23,7 +23,7 @@ const About = () => {
         <h1 className="mb-12 text-4xl text-indigo-600 dark:text-white font-medium dark:font-normal leading-tight">
           Hey there! I'm Abdullah.{" "}
           <span className="text-zinc-500">
-            I build cool websites like this one.
+            I build React apps & Shopify stores.
           </span>
         </h1>
         <a
@@ -38,11 +38,12 @@ const About = () => {
         <p>
           I'm a Frontend Developer from Pakistan.{" "}
           <span className="text-zinc-500">
-            I specialize in creating dynamic and visually appealing web
-            applications using Next.js, React & Tailwind CSS. With a strong
-            foundation in graphic design, I'm capable of building seamless and
-            user-friendly interfaces that not only function well but also look
-            great.
+            I specialize in crafting web applications using Next.js, React, and
+            Tailwind CSS. As a Shopify developer with expertise in Liquid
+            programming, I create custom e-commerce solutions that seamlessly
+            blend functionality and design. My strong foundation in graphic
+            design enables me to build user-friendly interfaces that are not
+            only intuitive but also visually captivating.
           </span>
         </p>
       </Block>
