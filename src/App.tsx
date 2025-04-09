@@ -2,13 +2,14 @@ import Footer from "./components/ui/footer";
 import Navbar from "./components/ui/navbar";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import profile from "/profile.webp";
 import cv from "/aibiansariCV.pdf";
 import About from "./components/ui/about";
 import Portfolio from "./components/ui/portfolio";
 import Contact from "./components/ui/contact";
 import { Toaster } from "sonner";
+import Shopify from "./components/ui/shopify";
 
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(true);
@@ -22,6 +23,11 @@ const App = () => {
     ).matches;
     return systemPrefersDark;
   });
+  const [activeSection, setActiveSection] = useState("Portfolio");
+
+  const handleSectionToggle = (section: SetStateAction<string>) => {
+    setActiveSection(section);
+  };
 
   // Sync state with localStorage
   useEffect(() => {
@@ -117,10 +123,36 @@ const App = () => {
         id="portfolio"
         className="flex flex-col items-center justify-center px-8 pb-8 text-zinc-50"
       >
-        <h1 className="font-ranga text-indigo-600 dark:text-slate-100 text-6xl pt-16 pb-8">
-          Portfolio
+        <h1 className="font-ranga text-6xl pt-16 pb-8">
+          <span
+            onClick={() => handleSectionToggle("Portfolio")}
+            className={`cursor-pointer transition-all duration-300 ${
+              activeSection === "Portfolio"
+                ? "text-white"
+                : "text-slate-400 dark:text-slate-700"
+            }`}
+          >
+            Portfolio
+          </span>
+          <span className="text-slate-400 dark:text-slate-500 mx-4">/</span>
+          <span
+            onClick={() => handleSectionToggle("Shopify")}
+            className={`cursor-pointer transition-all duration-300 ${
+              activeSection === "Shopify"
+                ? "text-white"
+                : "text-slate-400 dark:text-slate-700"
+            }`}
+          >
+            Shopify
+          </span>
         </h1>
-        <Portfolio />
+        <div
+          className={`transition-transform duration-500 transform ${
+            activeSection === "Portfolio" ? "rotate-y-0" : "rotate-y-180"
+          }`}
+        >
+          {activeSection === "Portfolio" ? <Portfolio /> : <Shopify />}
+        </div>
       </div>
       <div
         id="contact"
