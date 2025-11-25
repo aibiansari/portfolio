@@ -4,7 +4,7 @@ import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
 import { useState, useEffect, SetStateAction } from "react";
 import profile from "/profile.webp";
-import cv from "/aibiansariCV.pdf";
+import cv from "/MAbdullahCV.pdf";
 import About from "./components/ui/about";
 import Portfolio from "./components/ui/portfolio";
 import Contact from "./components/ui/contact";
@@ -128,7 +128,7 @@ const App = () => {
             onClick={() => handleSectionToggle("Portfolio")}
             className={`cursor-pointer transition-all duration-300 ${
               activeSection === "Portfolio"
-                ? "text-white"
+                ? "text-indigo-600 dark:text-white"
                 : "text-slate-400 dark:text-slate-700"
             }`}
           >
@@ -139,7 +139,7 @@ const App = () => {
             onClick={() => handleSectionToggle("Shopify")}
             className={`cursor-pointer transition-all duration-300 ${
               activeSection === "Shopify"
-                ? "text-white"
+                ? "text-indigo-600 dark:text-white"
                 : "text-slate-400 dark:text-slate-700"
             }`}
           >
