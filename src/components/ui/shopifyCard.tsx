@@ -18,6 +18,7 @@ const ShopifyCard: React.FC<CardProps> = ({
   link,
 }) => {
   const [hover, setHover] = React.useState(false);
+  const [imagesLoaded, setImagesLoaded] = React.useState(false);
 
   return (
     <motion.div
@@ -39,6 +40,7 @@ const ShopifyCard: React.FC<CardProps> = ({
           alt={`${name} Default`}
           className="absolute top-0 left-0 w-full h-full object-cover"
           animate={{ y: hover ? "-100%" : "0%" }}
+          onLoad={() => setImagesLoaded(true)}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         />
 
@@ -52,13 +54,16 @@ const ShopifyCard: React.FC<CardProps> = ({
         />
       </div>
 
-      {/* Arrow Icon */}
-      <FaArrowRight
-        className={`absolute right-12 top-9 transition-transform duration-500 ${
-          hover ? "-rotate-45" : "rotate-0"
-        }`}
-        size="1.4em"
-      />
+      {/* Arrow Icon: only render after the main image has loaded */}
+      {imagesLoaded && (
+        <FaArrowRight
+          className={`text-slate-500 absolute right-12 top-9 transition-transform duration-500 ${
+            hover ? "-rotate-45" : "rotate-0"
+          }`}
+          size="1.4em"
+          aria-hidden={!imagesLoaded}
+        />
+      )}
 
       {/* Text Section */}
       <div className="flex flex-col items-center my-2">
