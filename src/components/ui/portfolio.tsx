@@ -59,7 +59,7 @@ const Portfolio: React.FC = () => {
       icon: icon5,
       name: "Schnell Image Generator",
       desc: "Fast and intuitive image generator that brings your ideas to life in seconds, Using Flux AI's advanced Schnell model. Whether you're a designer or just someone looking to experiment with visual concepts, Schnell is here to help you generate high-quality images.",
-      link: "https://aibiansari.github.io/schnell-image-generator/",
+      link: "https://schnell-image-gen.vercel.app",
       techstack: [
         { name: "TypeScript", percentage: 75, color: "#3178c6" },
         { name: "JavaScript", percentage: 10, color: "#f7e025" },
